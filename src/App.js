@@ -21,7 +21,8 @@ import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/DarkTheme/GlobalStyles";
 import { lightTheme, darkTheme } from "./components/DarkTheme/Themes";
-import { useDarkMode } from "./components/DarkTheme/UseDarkMode";
+import { auth } from "./api/service";
+
 function App() {
   const navigate = useNavigate();
   const [theme, setTheme] = useState("light");
@@ -29,14 +30,15 @@ function App() {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
-  const [loggedInUser, setLoggedInUser] = React.useState({});
+  const [loggedInUser, setLoggedInUser] = React.useState(null);
   React.useEffect(() => {
-    axios
-      .get("/api/auth/loggedin")
+    auth
+      .checkLoggedIn()
       .then((response) => setLoggedInUser(response.data))
       .catch((err) => console.log(err));
     console.log("loggedin", loggedInUser);
   }, []);
+
   const logoutHandler = () => {
     logout().then((done) => {
       setLoggedInUser(null);
@@ -75,7 +77,12 @@ function App() {
 
             <Route
               path="/user"
-              element={<UserProfile loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />}
+              element={
+                <UserProfile
+                  loggedInUser={loggedInUser}
+                  setLoggedInUser={setLoggedInUser}
+                />
+              }
             />
 
             <Route
