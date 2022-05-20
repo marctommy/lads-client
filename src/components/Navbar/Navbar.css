@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav {
+  background-color: #a8dadc; /* Green */
+  color: rgb(233, 76, 194);
+  padding: 5px;
+  text-align: center;
+  font-size: 10px;
+  margin: 0.2rem;
+  justify-content: center;
+
+  border-radius: 5px;
+  border: 2px solid #1d3557;
+}
+
+.navbar-heading {
+  color: #1d3557;
+  size: 10px;
+}

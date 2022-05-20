@@ -1,0 +1,55 @@
+body {
+  background: rgb(168, 218, 220);
+  background: linear-gradient(
+    90deg,
+    rgba(168, 218, 220, 1) 53%,
+    rgba(241, 250, 238, 1) 100%
+  );
+}
+
+.login {
+  background-image: url(./login.gif);
+  background-size: 800px;
+  background-repeat: no-repeat;
+
+  padding: 40px;
+  width: 50vw;
+  height: 50vh;
+  border: 2px solid black;
+}
+.login button {
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 15px;
+}
+
+.login input {
+  margin: 10px;
+}
+
+.story {
+  width: 500px;
+}
+
+.profile-photo-selection {
+  width: 100px;
+  height: 100px;
+  border-radius: 90px;
+}
+.profile-photo-selection:hover {
+  border: 3px solid #4fd65d;
+  transform: scale(110%);
+  transition: 0.5s linear;
+}
+
+.sign-up {
+  width: 70vw;
+}
+
+.home-text {
+  color: rgb(70, 70, 70);
+}
+
+.parent {
+  justify-content: center;
+}

@@ -1,0 +1,28 @@
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 90px;
+}
+
+.container {
+  margin: 5px;
+  border-radius: 15px;
+}
+
+.user-profile {
+  width: 80vw;
+}
+
+.profile-button {
+  border-radius: 90px;
+  border: none;
+}
+
+.chat-bubble {
+  width: 130px;
+  margin-left: -65px;
+}
+
+.profile-text {
+  color: rgb(70, 70, 70);
+}
