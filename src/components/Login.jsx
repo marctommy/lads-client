@@ -19,24 +19,23 @@ const Login = (props) => {
   };
 
   return (
-    <div className="parent">
+    <center>
       <center>
         <div className="card login">
-          <div>
-            <input
-              style={{ marginTop: 200 }}
-              type="text"
-              placeholder="Email"
-              onChange={handleEmail}
-              value={email}
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={handlePasswordChange}
-              value={password}
-            />
-          </div>
+          <input
+            style={{ marginTop: 200 }}
+            type="text"
+            placeholder="Email"
+            onChange={handleEmail}
+            value={email}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            onChange={handlePasswordChange}
+            value={password}
+          />
+
           <div>
             <button
               type="button"
@@ -56,7 +55,7 @@ const Login = (props) => {
           </div>
         </div>
       </center>
-    </div>
+    </center>
   );
 };
 

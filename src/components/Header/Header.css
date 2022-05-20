@@ -11,6 +11,15 @@
   font-weight: bolder;
 }
 
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: 32px;
+  }
+  .sub-header {
+    font-size: 9px;
+  }
+}
+
 .sub-header {
   font-size: 20px;
   text-align: center;
