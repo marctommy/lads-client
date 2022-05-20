@@ -12,7 +12,6 @@ const UserUpdate = ({ loggedInUser, setLoggedInUser }) => {
   });
 
   const handleSubmit = async (event) => {
-    console.log("click");
     event.preventDefault();
 
     try {
