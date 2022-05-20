@@ -8,8 +8,6 @@ const sendMessage = (user, newMessage, activityId) =>
     newMessage,
   });
 
-// ${activityId}/conversation
-
 const checkLoggedIn = () => axios.get("/auth/loggedin");
 
 const signup = (name, password) =>
