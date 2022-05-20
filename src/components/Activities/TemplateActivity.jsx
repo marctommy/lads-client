@@ -29,7 +29,7 @@ export const TemplateActivity = ({ loggedInUser }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3005/api/activities/create",
+        "https://the-lads.herokuapp.com/api/activities/create",
         { ...newActivity, user: loggedInUser._id, location: location }
       );
       navigate("/activities");

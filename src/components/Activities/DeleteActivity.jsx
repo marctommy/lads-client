@@ -16,7 +16,7 @@ const DeleteActivity = ({ activity }) => {
 
     try {
       const update = await axios.delete(
-        `http://localhost:3005/api/activities/${id}`,
+        `https://the-lads.herokuapp.com/api/activities/${id}`,
         { ...deletedActivity }
       );
       navigate("/activities");

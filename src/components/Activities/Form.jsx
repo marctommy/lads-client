@@ -28,7 +28,7 @@ const Form = ({ loggedInUser }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3005/api/activities/create",
+        "https://the-lads.herokuapp.com/api/activities/create",
         { ...newActivity, category: categoryId, user: _id, location: location }
       );
       navigate("/activities");

@@ -24,7 +24,7 @@ export const EditActivity = ({ activity }) => {
 
     try {
       const update = await axios.put(
-        `http://localhost:3005/api/activities/${id}`,
+        `https://the-lads.herokuapp.com/api/activities/${id}`,
         { ...updatedActivity, location: location }
       );
 

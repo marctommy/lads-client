@@ -19,7 +19,7 @@ const AttendeeToggle = ({ loggedInUser, activity }) => {
     if (isAttended) {
       try {
         const response = await axios.put(
-          `http://localhost:3005/api/user/${loggedInUser._id}`,
+          `https://the-lads.herokuapp.com/api/user/${loggedInUser._id}`,
           {
             newEventId: _id,
             eventName: name,
@@ -32,7 +32,7 @@ const AttendeeToggle = ({ loggedInUser, activity }) => {
       }
     } else {
       const response = await axios.delete(
-        `http://localhost:3005/api/user/${loggedInUser._id}`,
+        `https://the-lads.herokuapp.com/api/user/${loggedInUser._id}`,
         {
           newEventId: _id,
           event: name,

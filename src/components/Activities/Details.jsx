@@ -18,7 +18,7 @@ export const Details = ({ loggedInUser }) => {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(
-        `http://localhost:3005/api/activities/${activityId}`
+        `https://the-lads.herokuapp.com/api/activities/${activityId}`
       );
       console.log("data:", data);
       setActivity(data);

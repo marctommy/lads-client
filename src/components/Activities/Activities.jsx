@@ -10,7 +10,9 @@ const Activities = ({ loggedInUser }) => {
   const [listOfActivities, setListOfActivities] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("http://localhost:3005/api/activities/");
+      const res = await axios.get(
+        "https://the-lads.herokuapp.com/api/activities/"
+      );
       setListOfActivities(res.data);
     };
     fetchData();

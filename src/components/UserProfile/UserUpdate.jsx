@@ -17,7 +17,7 @@ const UserUpdate = ({ loggedInUser, setLoggedInUser }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3005/api/user/${loggedInUser._id}`,
+        `https://the-lads.herokuapp.com/api/user/${loggedInUser._id}`,
         {
           ...updatedUser,
         }
