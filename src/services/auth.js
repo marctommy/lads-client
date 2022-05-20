@@ -10,7 +10,7 @@ const signup = (
   description
 ) => {
   return axios
-    .post("/api/auth/signup", {
+    .post("https://the-lads.herokuapp.com/api/auth/signup", {
       name,
       email,
       password,
@@ -29,7 +29,7 @@ const signup = (
 
 const login = (email, password) => {
   return axios
-    .post("/api/auth/login", { email, password })
+    .post("https://the-lads.herokuapp.com/api/auth/login", { email, password })
     .then((response) => {
       return response.data;
     })
@@ -40,7 +40,7 @@ const login = (email, password) => {
 
 const logout = () => {
   return axios
-    .delete("/api/auth/logout")
+    .delete("https://the-lads.herokuapp.com/api/auth/logout")
     .then((response) => {
       return response.data;
     })
