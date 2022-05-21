@@ -10,7 +10,19 @@
 }
 
 .user-profile {
-  width: 80vw;
+  width: 70vw;
+}
+
+@media screen and (max-width: 600px) {
+  .user-edit {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .user-profile {
+    width: 80vw;
+  }
 }
 
 .profile-button {

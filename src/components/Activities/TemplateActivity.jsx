@@ -127,7 +127,7 @@ export const TemplateActivity = ({ loggedInUser }) => {
   return (
     <div>
       <center>
-        <div className="form">
+        <div className="form activity-text">
           <form className="card" onSubmit={handleSubmit}>
             <label>
               Name

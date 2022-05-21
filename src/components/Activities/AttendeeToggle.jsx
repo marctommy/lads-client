@@ -7,13 +7,13 @@ const AttendeeToggle = ({ loggedInUser, activity }) => {
   // const [isAttended, setIsAttended] = useState(
   //   loggedInUser.eventsAttended?.includes(_id) && false
   // );
-  useEffect(() => {
-    if (loggedInUser.eventsAttended?.includes(_id)) {
-      setIsAttended(true);
-    } else {
-      setIsAttended(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (loggedInUser.eventsAttended?.includes(_id)) {
+  //     setIsAttended(true);
+  //   } else {
+  //     setIsAttended(false);
+  //   }
+  // }, []);
 
   const handleToggle = async (event) => {
     if (isAttended) {
@@ -22,8 +22,6 @@ const AttendeeToggle = ({ loggedInUser, activity }) => {
           `https://the-lads.herokuapp.com/api/user/${loggedInUser._id}`,
           {
             newEventId: _id,
-            eventName: name,
-            attendees: attendees,
           }
         );
         setIsAttended(false);
@@ -35,8 +33,6 @@ const AttendeeToggle = ({ loggedInUser, activity }) => {
         `https://the-lads.herokuapp.com/api/user/${loggedInUser._id}`,
         {
           newEventId: _id,
-          event: name,
-          attendees: attendees,
         }
       );
       setIsAttended(true);

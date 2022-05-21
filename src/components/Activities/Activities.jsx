@@ -5,6 +5,7 @@ import "./Activity.css";
 import { ItemActivity } from "./ItemActivity";
 import { LoadingComponent } from "../Header/LoadingComponent";
 import Weather from "../Features/Weather";
+import SearchBar from "./SearchBar";
 
 const Activities = ({ loggedInUser }) => {
   const [listOfActivities, setListOfActivities] = useState([]);
@@ -24,13 +25,18 @@ const Activities = ({ loggedInUser }) => {
     <div>
       <center>
         <Weather />
-
+        <br />
+        <SearchBar
+          listOfActivities={listOfActivities}
+          loggedInUser={loggedInUser}
+        />
         <Link to="/activities/create" className="activity-btn">
           Create Own
         </Link>
         <Link to="/activities/create/template" className="activity-btn">
           Choose Template
         </Link>
+
         {listOfActivities?.map((activity, index) => (
           <ItemActivity
             activity={activity}

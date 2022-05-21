@@ -93,15 +93,15 @@ export const Details = ({ loggedInUser }) => {
           <img
             style={{
               width: "150px",
-              marginLeft: -300,
-              marginTop: 260,
+              marginLeft: -320,
+              marginTop: 220,
               position: "absolute",
             }}
             alt="profile"
-            src={require(`../assets/true-children.gif`)}
+            src={require(`../assets/child-true.gif`)}
           />
         ) : null}
-        <p className="text-left">
+        <p className="text-left" style={{ width: 500 }}>
           <strong>Description: </strong>
           {activity.description || "Looking for description."}
         </p>

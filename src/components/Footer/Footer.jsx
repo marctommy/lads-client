@@ -33,10 +33,10 @@ const Footer = () => {
               <img
                 style={{
                   borderRadius: 100,
-                  widht: 140,
-                  height: 160,
+                  widht: "50%",
+                  height: "100%",
                 }}
-                src={require("../assets/profile.gif")}
+                src={require("../assets/profile_edited.gif")}
                 alt="tag"
                 onClick={handleDetails}
               />

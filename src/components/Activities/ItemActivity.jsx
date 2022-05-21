@@ -81,9 +81,9 @@ export const ItemActivity = ({ activity, loggedInUser }) => {
                     src={require(`../UserProfile/avatars/${user.avatarId}.gif`)}
                   />
                   <br />
-                  <span className="text-muted small">Location:{location}</span>
+                  <span className="text-muted small">Location: {location}</span>
                   <br />
-
+                  <br />
                   <div className="mb-0 text-udivercase">
                     <span className="text-muted small">
                       Check Details for more info.

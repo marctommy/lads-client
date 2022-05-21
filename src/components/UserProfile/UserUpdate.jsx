@@ -29,61 +29,64 @@ const UserUpdate = ({ loggedInUser, setLoggedInUser }) => {
   };
 
   return (
-    <div className="user-profile">
-      <hr />
-      <form onSubmit={handleSubmit}>
-        <label className="text-muted small">
-          Name
-          <input
-            type="text"
-            onChange={(event) => {
-              setUpdatedUser({
-                ...updatedUser,
-                name: event.target.value,
-              });
-            }}
-            value={updatedUser.name}
-          />
-        </label>
-        <br />
+    <center>
+      <div className="">
+        <hr />
+        <form onSubmit={handleSubmit}>
+          <label className="text-muted small">
+            Name
+            <input
+              type="text"
+              onChange={(event) => {
+                setUpdatedUser({
+                  ...updatedUser,
+                  name: event.target.value,
+                });
+              }}
+              value={updatedUser.name}
+            />
+          </label>
+          <br />
 
-        <label className="text-muted small">
-          Description <br />
-          <textarea
-            type="text"
-            onChange={(event) => {
-              setUpdatedUser({
-                ...updatedUser,
-                description: event.target.value,
-              });
-            }}
-            value={updatedUser.description}
-          />
-        </label>
-        <br />
+          <label className="text-muted small">
+            Description <br />
+            <textarea
+              type="text"
+              onChange={(event) => {
+                setUpdatedUser({
+                  ...updatedUser,
+                  description: event.target.value,
+                });
+              }}
+              value={updatedUser.description}
+            />
+          </label>
+          <br />
+          <br />
 
-        <label className="text-muted small">
-          Location
-          <input
-            type="text"
-            onChange={(event) => {
-              setUpdatedUser({
-                ...updatedUser,
-                location: event.target.value,
-              });
-            }}
-            value={updatedUser.location}
-          />
-        </label>
+          <label className="text-muted small">
+            Location
+            <input
+              type="text"
+              onChange={(event) => {
+                setUpdatedUser({
+                  ...updatedUser,
+                  location: event.target.value,
+                });
+              }}
+              value={updatedUser.location}
+            />
+          </label>
 
-        <button
-          className="btn btn-outline-dark btn-sm btn-floating"
-          type="submit"
-        >
-          Update
-        </button>
-      </form>
-    </div>
+          <button
+            className="btn btn-outline-dark btn-sm btn-floating"
+            type="submit"
+          >
+            Update
+          </button>
+        </form>
+      </div>
+    </center>
   );
 };
 

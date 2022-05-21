@@ -24,35 +24,29 @@ const Weather = () => {
   console.log(weather);
   return (
     <div className="weather-container">
-      {/* sunny */}
       {weather.description === "clear sky" ||
-      "broken clouds" ||
-      "few clouds" ? (
+      weather.description === "broken clouds" ||
+      weather.description === "few clouds" ? (
         <div className="sunny"></div>
-      ) : null}
-      {/* cloudy */}
-      {weather.description === "scattered clouds" ? (
+      ) : weather.description === "scattered clouds" ? (
         <div className="cloudy"></div>
-      ) : null}
-      {/* rainy */}
-      {weather.description === "shower rain" ? (
+      ) : weather.description === "shower rain" ? (
         <div className="rainy"></div>
-      ) : null}
-      {/* rainbow */}
-      {weather.description === "rain" ? <div className="rainbow"></div> : null}
-      {/* stormy */}
-      {weather.description === "thunderstorm" ? (
+      ) : weather.description === "rain" ? (
+        <div className="rainbow"></div>
+      ) : weather.description === "thunderstorm" ? (
         <div className="stormy"></div>
+      ) : weather.description === "snow" ? (
+        <div className="snowy"></div>
       ) : null}
-      {/* snow  */}
-      {weather.description === "snow" ? <div className="snowy"></div> : null}
 
       <div>
         <span>
-          <strong> {weather.description} </strong>
+          {" "}
+          <small>
+            in {city} today: {weather.max}°C
+          </small>
         </span>
-        <span> current:{weather.temperature}°C,</span>
-        <span> today max:{weather.max}°C</span>
       </div>
     </div>
   );

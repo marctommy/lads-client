@@ -8,9 +8,10 @@ export const ContactMe = () => {
         style={{
           backgroundColor: "#F1FAEE",
           borderRadius: 50,
-          padding: 15,
+          padding: 10,
           position: "absolute",
-          marginLeft: 140,
+          marginTop: -90,
+          marginLeft: 130,
         }}
       >
         {" "}
@@ -28,10 +29,10 @@ export const ContactMe = () => {
         style={{
           backgroundColor: "#F1FAEE",
           borderRadius: 50,
-          padding: 15,
+          padding: 10,
           position: "absolute",
-          marginTop: 30,
-          marginLeft: -80,
+          marginTop: -20,
+          marginLeft: 110,
         }}
       >
         {" "}
@@ -40,7 +41,7 @@ export const ContactMe = () => {
             style={{ marginLeft: 5 }}
             href="https://wa.me/00491791096137?text=urlencodedtext"
           >
-            Call or Send a Message!
+            Send a Message!
           </ContactLink>
         </i>
       </div>

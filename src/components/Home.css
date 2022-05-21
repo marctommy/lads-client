@@ -14,13 +14,20 @@ body {
   background-position: 50%;
   padding-top: -30px;
   width: 50vw;
-  height: 55vh;
+  height: 450px;
   border: 2px solid black;
 }
 .login button {
   padding: 0.5rem;
   margin: 1rem;
   border-radius: 15px;
+  background-color: #f1faee;
+}
+
+.login a {
+  padding: 0.5rem;
+  border-radius: 15px;
+  background-color: #f1faee;
 }
 
 .login input {
@@ -74,7 +81,13 @@ body {
 }
 
 .sign-up {
-  width: 70vw;
+  width: 35vw;
+}
+
+@media screen and (max-width: 600px) {
+  .sign-up {
+    width: 80vw;
+  }
 }
 
 .home-text {
