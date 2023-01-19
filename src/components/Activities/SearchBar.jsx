@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Filtered from "./Filtered";
-import ItemActivity from "./ItemActivity";
-const SearchBar = ({ listOfActivities }) => {
+
+const SearchBar = ({ listOfActivities, setSearchBarInput }) => {
   const [inputText, setInputText] = useState("");
 
   let inputHandler = (element) => {
     //convert input text to lower case
     const lowerCase = element.target.value.toLowerCase();
     setInputText(lowerCase);
+    setSearchBarInput(lowerCase);
   };
 
   return (
@@ -17,12 +18,12 @@ const SearchBar = ({ listOfActivities }) => {
           id="outlined-basic"
           placeholder="Search for Category"
           onChange={inputHandler}
+          value={inputText}
           variant="outlined"
           fullWidth
           label="Search"
         />
       </div>
-      <Filtered listOfActivities={listOfActivities} input={inputText} />
     </div>
   );
 };

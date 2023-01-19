@@ -9,6 +9,8 @@ import SearchBar from "./SearchBar";
 
 const Activities = ({ loggedInUser }) => {
   const [listOfActivities, setListOfActivities] = useState([]);
+  const [searchBarInput, setSearchBarInput] = useState("");
+
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(
@@ -18,6 +20,8 @@ const Activities = ({ loggedInUser }) => {
     };
     fetchData();
   }, []);
+
+  //element.target.value.toLowerCase()
 
   return !listOfActivities.length > 0 ? (
     <LoadingComponent />
@@ -29,6 +33,7 @@ const Activities = ({ loggedInUser }) => {
         <SearchBar
           listOfActivities={listOfActivities}
           loggedInUser={loggedInUser}
+          setSearchBarInput={setSearchBarInput}
         />
         <Link to="/activities/create" className="activity-btn">
           Create Own
@@ -37,13 +42,17 @@ const Activities = ({ loggedInUser }) => {
           Choose Template
         </Link>
 
-        {listOfActivities?.map((activity, index) => (
-          <ItemActivity
-            activity={activity}
-            loggedInUser={loggedInUser}
-            key={activity.name}
-          />
-        ))}
+        {listOfActivities
+          ?.filter((activity) =>
+            activity.category.toLowerCase().includes(searchBarInput)
+          )
+          .map((activity, index) => (
+            <ItemActivity
+              activity={activity}
+              loggedInUser={loggedInUser}
+              key={`${activity.name}+${index}`}
+            />
+          ))}
       </center>
     </div>
   );
